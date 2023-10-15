@@ -23,7 +23,7 @@ This is a simple shell project that demostrate the basic functionalities of unix
 
 8. **Testing** - creates set of test cases to verify that the shell commands behave correctly and produces the expected output.
 
-##Project files
+## Project files
 
 1. **simple-shell.c** - Contains the implementations of the shell's core logics. This is the main source code file for this project.
 2. **input.c** - contains files related to parsing user input. it recognizes commands, arguments, special operators and handles input/output redirections.
