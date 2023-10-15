@@ -25,7 +25,13 @@ This is a simple shell project that demostrate the basic functionalities of unix
 
 ##Project files
 
-
+1. **simple-shell.c** - Contains the implementations of the shell's core logics. This is the main source code file for this project.
+2. **input.c** - contains files related to parsing user input. it recognizes commands, arguments, special operators and handles input/output redirections.
+3. **execute.c** - contains code for executing external commands, handling built-in commands and managing foregriund and background processes.
+4. **pipe.c** handles piping commands.
+5. **signals.c** - deals with signal handling, allowing the shell to respond to Ctrl-C and Ctrl-Z signals appropriately.
+6. **builtins.c** - contains the implementation of builtin commands.
+7. **shell.h** - the header file for the project. includes function prototypes, constants and data structures used across different source code files.
 
 ## AUTHOR
 
