@@ -1,4 +1,5 @@
 #include "shell.h"
+#include "shell.c"
 
 /**
  * main - Function that diplays prompt in shell program
