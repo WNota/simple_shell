@@ -3,6 +3,7 @@
 /**
  * execute_command - function that execute the command 
  * @char - character
+ * @args: variable arguments list
  */
 
 void execute_command(char *command)
@@ -24,7 +25,10 @@ void execute_command(char *command)
 		}
 		else if (pid == 0)
 		{
-			char *args[] = {cleaned_command, NULL};
+
+			char *args[2];
+		       args[0] = cleaned_command;
+		       args[1] = NULL;
 			execve(cleaned_command, args, NULL);
 			perror(cleaned_command);
 			_exit(2);
@@ -33,11 +37,11 @@ void execute_command(char *command)
 		else
 		{
 			int status;
-			wait(&status);
+			waitpid(pid, &status, 0);
 		}
 		}
 		else
 		{
-			fprintf(stderr, "command not found: %s\n", cleaned_command)
+			fprintf(stderr, "command not found: %s\n", cleaned_command);
 		}
 }

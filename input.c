@@ -20,3 +20,6 @@ char *read_command()
 
 		return (NULL);
 	}
+
+	return (line);
+}

@@ -5,8 +5,9 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include <sys/wait.h>
 
-void display_propmpt();
+void display_prompt();
 char *read_command();
 void execute_command(char *command);
 
