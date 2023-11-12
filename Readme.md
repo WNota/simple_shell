@@ -32,6 +32,7 @@ This is a simple shell project that demostrate the basic functionalities of unix
 5. **signals.c** - deals with signal handling, allowing the shell to respond to Ctrl-C and Ctrl-Z signals appropriately.
 6. **builtins.c** - contains the implementation of builtin commands.
 7. **shell.h** - the header file for the project. includes function prototypes, constants and data structures used across different source code files.
+8. **authors.c** - file consists of contributors and maintainer for the project.
 
 ## AUTHOR
 
