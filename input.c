@@ -1,25 +1,20 @@
 #include "shell.h"
 
 /**
- * read_command - function that reads the command before prompt is displayed
- * @char - character
- * Return: NULL
- *
+ * getline - function that allocates memory dynamically
+ * @char - character to be dispayed
+ * Return: 0
  */
 
-
-char *read_command()
+ssize_t getline(char **lineptr, size_t *n, FILE *stream)
 
 {
-	char *line = NULL;
-	size_t len = 0;
+	char *lineptr
+	size_t n = 0;
 
-	if (getline(&line, &len, stdin) == -1)
-	{
-		free(line);
-
-		return (NULL);
-	}
-
-	return (line);
+	getline(&lineptr, &n, stdin);
+	
+	free(lineptr);
+	
+	return (0);
 }

@@ -7,8 +7,8 @@
 #include <unistd.h>
 #include <sys/wait.h>
 
-void display_prompt();
-char *read_command();
-void execute_command(char *command);
+int main(int ac, char **argv);
+size_t getline(char **lineptr, size_t *n, FILE *stream);
+getline(&lineptr , &n, stdin);
 
 #endif
