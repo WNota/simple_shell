@@ -9,12 +9,19 @@
 ssize_t getline(char **lineptr, size_t *n, FILE *stream)
 
 {
-	char *lineptr
-	size_t n = 0;
+	ssize_t read;
 
-	getline(&lineptr, &n, stdin);
+	if (*lineptr == NULL)
+	{
+		*lineptr = (char *)malloc(*n);
+		if (*lineptr == NULL)
+		{
+			perror("malloc");
+			exit(EXIT_FAILURE);
+		}
+	}
 	
-	free(lineptr);
+	read = getline(lineptr, n, stream);
 	
-	return (0);
+	return (read);
 }

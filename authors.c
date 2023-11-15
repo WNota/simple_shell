@@ -1,9 +1,34 @@
-## Project Maintainer
+#include "shell.h"
 
-Winnie Nota
+struct Author 
 
-## Contributors
+{
+	char *name;
+	char *email;
+	char *github;
+};
 
-WInnie Nota (https://github.com/WNota)
+struct Author author =
+{
+	"Winnie Nota",
+	"winnienota1@gmail.com",
+	"github.com/WNota"
 
-Email: winnienota1@gmail.com
+};
+
+void printAuthor()
+{
+	printf("Author:\n");
+	printf("Name: %s\n", author.name);
+	printf("Email: %s\n", author.email);
+	printf("Github: %s\n", author.github);
+}
+
+int main(int ac, char **argv)
+{
+	(void)ac; (void)argv;
+
+	printAuthor();
+
+	return (0);
+}

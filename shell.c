@@ -10,9 +10,11 @@
 int main(int ac, char **argv)
 
 {
-	char *prompt = "(hsh) $ ";
+	char *prompt = "(shell) $ ";
 
-	printf("%\ns" , prompt);
+	(void)ac; (void)argv; /*void varialbes declaration*/
+
+	printf("%s\n" , prompt);
 
 	return (0);
 }

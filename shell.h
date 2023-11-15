@@ -8,7 +8,6 @@
 #include <sys/wait.h>
 
 int main(int ac, char **argv);
-size_t getline(char **lineptr, size_t *n, FILE *stream);
-getline(&lineptr , &n, stdin);
+ssize_t getline(char **lineptr, size_t *n, FILE *stream);
 
 #endif
