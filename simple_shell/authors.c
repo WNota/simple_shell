@@ -1,7 +1,6 @@
 #include "shell.h"
 
-struct Author 
-
+struct Author
 {
 	char *name;
 	char *email;
@@ -16,19 +15,10 @@ struct Author author =
 
 };
 
-void printAuthor()
+void printAuthor(struct Author author)
 {
 	printf("Author:\n");
 	printf("Name: %s\n", author.name);
 	printf("Email: %s\n", author.email);
 	printf("Github: %s\n", author.github);
-}
-
-int main(int ac, char **argv)
-{
-	(void)ac; (void)argv;
-
-	printAuthor();
-
-	return (0);
 }

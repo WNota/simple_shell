@@ -9,5 +9,6 @@
 
 int main(int ac, char **argv);
 ssize_t getline(char **lineptr, size_t *n, FILE *stream);
+void printAuthor(struct Author author);
 
 #endif

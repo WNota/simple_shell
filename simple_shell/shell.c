@@ -1,6 +1,8 @@
 #include "shell.h"
 
-/** main - main function to print prompt
+/*
+ * main - main function of shell program, it displays prompt and wait
+ * for user to enter command.
  * @char: the character to print
  * @...: variable arguments
  * @size_t: stores allocated size in bytes
@@ -12,9 +14,10 @@ int main(int ac, char **argv)
 {
 	char *prompt = "(shell) $ ";
 
-	(void)ac; (void)argv; /*void varialbes declaration*/
+	(void)ac;
+	(void)argv; /*void varialbes declaration*/
 
-	printf("%s\n" , prompt);
+	printf("%s\n", prompt);
 
 	return (0);
 }
