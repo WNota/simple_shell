@@ -25,7 +25,7 @@ This is a simple shell project that demostrate the basic functionalities of unix
 
 ## Project files
 
-1. **simple-shell.c** - Contains the implementations of the shell's core logics. This is the main source code file for this project.
+1. **shell.c** - Contains the implementations of the shell's core logics. This is the main source code file for this project.
 2. **input.c** - contains files related to parsing user input. it recognizes commands, arguments, special operators and handles input/output redirections.
 3. **execute.c** - contains code for executing external commands, handling built-in commands and managing foregriund and background processes.
 4. **pipe.c** handles piping commands.
