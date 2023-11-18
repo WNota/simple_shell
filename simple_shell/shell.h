@@ -6,9 +6,24 @@
 #include <string.h>
 #include <unistd.h>
 #include <sys/wait.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <signal.h>
 
-int main(int ac, char **argv);
-ssize_t getline(char **lineptr, size_t *n, FILE *stream);
-void printAuthor(struct Author author);
+#define BUFFER_SIZE 1024
+
+void prompt(void);
+char *read_line(void);
+char **parse_line(char *line);
+int execute_command(char **args);
+int main(void);
+typedef struct Author
+{
+        char *name;
+        char *email;
+        char *github;
+} Author;
+void printAuthor(Author author);
 
 #endif

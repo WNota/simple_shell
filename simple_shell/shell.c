@@ -1,23 +1,32 @@
 #include "shell.h"
 
-/*
- * main - main function of shell program, it displays prompt and wait
- * for user to enter command.
- * @char: the character to print
- * @...: variable arguments
- * @size_t: stores allocated size in bytes
- * Return: 0 Success
+/**
+ * main - Entry point for the simple shell.
+ *
+ * Description: Displays a prompt, waits for the user to input a command,
+ * and then executes the command. This process continues until the user
+ * exits the shell.
+ *
+ * Return: Always returns 0.
  */
-
-int main(int ac, char **argv)
-
+int main(void)
 {
-	char *prompt = "(shell) $ ";
+	char *line;
+	char **args;
+	int status;
 
-	(void)ac;
-	(void)argv; /*void varialbes declaration*/
+	do {
+		prompt();
+		line = read_line();
+		args = parse_line(line);
+		status = handle_builtin(args);
 
-	printf("%s\n", prompt);
+		if (status)
+			status = execute_command(args);
+
+		free(line);
+		free(args);
+	} while (status);
 
 	return (0);
 }

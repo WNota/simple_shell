@@ -1,21 +1,31 @@
 #include "shell.h"
 
-struct Author
-{
-	char *name;
-	char *email;
-	char *github;
-};
+/**
+ * main - Entry point for the authors information.
+ *
+ * Return: Always returns 0.
+ */
 
-struct Author author =
+int main(void)
 {
+	Author author = {
 	"Winnie Nota",
 	"winnienota1@gmail.com",
 	"github.com/WNota"
+	};
 
-};
+printAuthor(author);
 
-void printAuthor(struct Author author)
+return (0);
+
+}
+
+/**
+ * printAuthor - Prints information about an author.
+ * @author: The author to print information about.
+ */
+
+void printAuthor(Author author)
 {
 	printf("Author:\n");
 	printf("Name: %s\n", author.name);
